@@ -7,6 +7,7 @@
 
 ///
 @_exported import Foundation
+@_exported import RandomlyGeneratable_module
 
 
 ///
@@ -30,5 +31,19 @@ public struct ColorCode_RGBA_256: Hashable {
         self.green = green
         self.blue = blue
         self.alpha = alpha
+    }
+}
+
+///
+extension ColorCode_RGBA_256: RandomlyGeneratable {
+    
+    ///
+    public static func generateRandom () -> Self {
+        .init(
+            red: .generateRandom(),
+            green: .generateRandom(),
+            blue: .generateRandom(),
+            alpha: .generateRandom()
+        )
     }
 }

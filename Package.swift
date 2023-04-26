@@ -16,6 +16,12 @@ let package = Package(
         
         ///
         .package(
+            url: "https://github.com/jeremyabannister/RandomlyGeneratable-module",
+            "0.1.0" ..< "0.2.0"
+        ),
+        
+        ///
+        .package(
             url: "https://github.com/jeremyabannister/Testable-module",
             "0.1.0" ..< "0.2.0"
         ),
@@ -23,7 +29,9 @@ let package = Package(
     targets: [
         .target(
             name: "ColorCode-RGBA-256-module",
-            dependencies: []
+            dependencies: [
+                "RandomlyGeneratable-module",
+            ]
         ),
         .testTarget(
             name: "ColorCode-RGBA-256-module-tests",
