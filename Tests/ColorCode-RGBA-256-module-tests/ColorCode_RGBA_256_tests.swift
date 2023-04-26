@@ -15,7 +15,7 @@ import XCTest
 final class ColorCode_RGBA_256_tests: XCTestCase {
     
     ///
-    func test_init_red256_green256_blue256_alpha256 () throws {
+    func test_init_red_green_blue_alpha () throws {
         
         ///
         func randomizedTest () throws {
@@ -29,15 +29,15 @@ final class ColorCode_RGBA_256_tests: XCTestCase {
             
             ///
             try ColorCode_RGBA_256(
-                red256: r,
-                green256: g,
-                blue256: b,
-                alpha256: a
+                red: r,
+                green: g,
+                blue: b,
+                alpha: a
             )
-                .assert(\.red256, equals: r)
-                .assert(\.green256, equals: g)
-                .assert(\.blue256, equals: b)
-                .assert(\.alpha256, equals: a)
+                .assert(\.red, equals: r)
+                .assert(\.green, equals: g)
+                .assert(\.blue, equals: b)
+                .assert(\.alpha, equals: a)
         }
         
         ///

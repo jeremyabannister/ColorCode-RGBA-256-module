@@ -13,22 +13,22 @@
 public struct ColorCode_RGBA_256: Hashable {
     
     ///
-    public var red256: UInt8
-    public var green256: UInt8
-    public var blue256: UInt8
-    public var alpha256: UInt8
+    public var red: UInt8
+    public var green: UInt8
+    public var blue: UInt8
+    public var alpha: UInt8
     
     ///
     public init
-        (red256: UInt8,
-         green256: UInt8,
-         blue256: UInt8,
-         alpha256: UInt8) {
+        (red: UInt8,
+         green: UInt8,
+         blue: UInt8,
+         alpha: UInt8) {
         
         ///
-        self.red256 = red256
-        self.green256 = green256
-        self.blue256 = blue256
-        self.alpha256 = alpha256
+        self.red = red
+        self.green = green
+        self.blue = blue
+        self.alpha = alpha
     }
 }
