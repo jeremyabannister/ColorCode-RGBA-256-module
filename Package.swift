@@ -29,14 +29,13 @@ let package = Package(
     targets: [
         .target(
             name: "ColorCode-RGBA-256-module",
-            dependencies: [
-                "RandomlyGeneratable-module",
-            ]
+            dependencies: []
         ),
         .testTarget(
             name: "ColorCode-RGBA-256-module-tests",
             dependencies: [
                 "ColorCode-RGBA-256-module",
+                "RandomlyGeneratable-module",
                 "Testable-module",
             ]
         ),

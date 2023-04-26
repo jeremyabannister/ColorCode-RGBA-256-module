@@ -7,6 +7,7 @@
 
 ///
 import ColorCode_RGBA_256_module
+import RandomlyGeneratable_module
 import Testable_module
 import XCTest
 
@@ -21,11 +22,13 @@ final class ColorCode_RGBA_256_tests: XCTestCase {
         func randomizedTest () throws {
             
             ///
-            let range = UInt8.min ... UInt8.max
+            func random () -> UInt8 {
+                .generateRandom()
+            }
             
             ///
             let (r, g, b, a) =
-                (range.randomElement()!, range.randomElement()!, range.randomElement()!, range.randomElement()!)
+                (random(), random(), random(), random())
             
             ///
             try ColorCode_RGBA_256(
